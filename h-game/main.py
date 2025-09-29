@@ -5,13 +5,13 @@ from py4godot.classes.Control import Control
 class main(Control):
 
 	def _on_newgame_pressed(self):
-		pass
+		print("new")
 
 	def _on_Continew_pressed(self):
 		print("Continue")
 
 	def _on_lederbord_pressed(self):
 		print("Leaderboard")
-
 	def _on_exit_pressed(self):
-		get_tree().quit()
+		 ### exit
+		self.get_tree().quit()
