@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://db4komuwe55g4"]
+
+[ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png" id="1_lsu2v"]
+[ext_resource type="Texture2D" uid="uid://cgraxhlwf7k7g" path="res://img/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png" id="2_sp8fs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sp8fs"]
+texture = ExtResource("1_lsu2v")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -10.0
+offset_right = 1223.0
+offset_bottom = 708.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_sp8fs")
+
+[node name="GeminiGeneratedImageVzxnsdvzxnsdvzxnPhotoroom" type="Sprite2D" parent="."]
+position = Vector2(954.99994, 595.9999)
+scale = Vector2(1.5516418, 1.5516417)
+texture = ExtResource("2_sp8fs")

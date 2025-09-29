@@ -94,6 +94,8 @@ theme_override_fonts/font = ExtResource("2_0e48y")
 theme_override_font_sizes/font_size = 45
 text = "Integrated Strategy (IS)"
 
+[node name="Node2D" type="Node2D" parent="."]
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Continew_pressed"]

@@ -5,7 +5,7 @@ from py4godot.classes.Control import Control
 class main(Control):
 
 	def _on_newgame_pressed(self):
-		print("new")
+		self.get_tree().change_scene_to_file("stage\\stage1.tscn")
 
 	def _on_Continew_pressed(self):
 		print("Continue")
