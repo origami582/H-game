@@ -6,7 +6,6 @@ from .charactor import Globals
 class maingame(Control):
 	def _ready(self):
 		Globals.init_character()
-
 		print(f"Level: {Globals.level}")
 		print(f"EXP: {Globals.exp}/{Globals.exp_req}")
 		print(f"Total EXP: {Globals.exp_total}")

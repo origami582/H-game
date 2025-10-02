@@ -34,4 +34,4 @@ class Globals:
 	@staticmethod
 	def level_up():
 		Globals.level += 1
-		Globals.exp_req = Globals.get_req_exp(Globals.level + 1)
+		Globals
