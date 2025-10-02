@@ -16,7 +16,6 @@ class Globals:
 
 	@staticmethod
 	def init_character():
-		""" เซ็ตค่าเริ่มต้นให้ตัวละคร """
 		Globals.level = 1
 		Globals.exp = 0
 		Globals.exp_total = 0
@@ -34,4 +33,4 @@ class Globals:
 	@staticmethod
 	def level_up():
 		Globals.level += 1
-		Globals
+		Globals.exp_req = Globals.get_req_exp(Globals.level + 1)
