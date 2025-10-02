@@ -7,10 +7,11 @@ class main(Control):
 	def _ready(self):
 		#ready game this pop up close
 		self.get_node("CanvasLayer").visible = False
+
 	def _on_newgame_pressed(self):
 		#open popup
 		self.get_node("CanvasLayer").visible = True
-		
+
 	def _on_Continew_pressed(self):
 		#pass
 		print("Continue")
