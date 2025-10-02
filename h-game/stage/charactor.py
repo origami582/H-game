@@ -2,7 +2,7 @@ from py4godot.classes import gdclass
 
 @gdclass
 class Globals:
-	max_hp = 100
+	hp = 100
 	strength = 10
 
 	level = 1
@@ -16,6 +16,10 @@ class Globals:
 
 	@staticmethod
 	def init_character():
+<<<<<<< Updated upstream
+=======
+		'''Set default character stats'''
+>>>>>>> Stashed changes
 		Globals.level = 1
 		Globals.exp = 0
 		Globals.exp_total = 0
@@ -34,3 +38,11 @@ class Globals:
 	def level_up():
 		Globals.level += 1
 		Globals.exp_req = Globals.get_req_exp(Globals.level + 1)
+	
+	@staticmethod
+	def skip_penalty():
+		# HP reduction
+		print("Penalized")
+		Globals.hp -= 10
+		return Globals.hp
+		
