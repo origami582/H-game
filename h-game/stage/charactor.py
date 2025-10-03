@@ -9,6 +9,8 @@ class Globals:
 	exp = 0
 	exp_total = 0
 	exp_req = 0
+	# new
+	difficult = 1
 
 	@staticmethod
 	def get_req_exp(level):

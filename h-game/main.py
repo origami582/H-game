@@ -1,6 +1,7 @@
 from py4godot.classes import gdclass
 from py4godot.classes.Control import Control
-
+#Connect files to charactor
+from stage.charactor import Globals
 @gdclass
 class main(Control):
 	# popup close
@@ -29,11 +30,14 @@ class main(Control):
 
 	#difficult select and var to scale with exp_gain and monster status 
 	def _on_easy_pressed(self):
-		difficult = 1
+		#add Globals. forward
+		Globals.difficult = 1
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 	def _on_medium_pressed(self):
-		difficult = 1.5
+		#add Globals. forward
+		Globals.difficult = 1.5
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 	def _on_hard_pressed(self):
-		difficult = 2
+		#add Globals. forward
+		Globals.difficult = 2
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")

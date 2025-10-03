@@ -11,6 +11,8 @@ class maingame(Control):
 		print(f"Total EXP: {Globals.exp_total}")
 	def _on_skip_pressed(self):
 		print("skip")
+		#check difficult
+		print(Globals.difficult)
 
 
 	def _on_next_pressed(self):
