@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cmv346dxq5u14"]
 
 [ext_resource type="Script" path="res://main.py" id="1_glbon"]
-[ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background.png" id="2_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="2_nlkkf"]
 [ext_resource type="FontFile" uid="uid://c3xq2g0h1idc6" path="res://font/TA 8 bit.otf" id="3_qe12f"]
 [ext_resource type="Script" path="res://Level.py" id="4_8qtwp"]
 [ext_resource type="Script" path="res://UI/LEVEL.py" id="5_dy7ct"]

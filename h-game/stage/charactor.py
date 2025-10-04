@@ -16,10 +16,6 @@ class Globals:
 
 	@staticmethod
 	def init_character():
-<<<<<<< Updated upstream
-=======
-		'''Set default character stats'''
->>>>>>> Stashed changes
 		Globals.level = 1
 		Globals.exp = 0
 		Globals.exp_total = 0
