@@ -9,8 +9,9 @@
 [ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="6_6b4x6"]
 [ext_resource type="Texture2D" uid="uid://bg3iw3mviox0t" path="res://img/Buttons/dungeon0_go.png" id="8_bwayr"]
 
-[sub_resource type="Environment" id="Environment_vf5ng"]
-adjustment_enabled = true
+[sub_resource type="Environment" id="Environment_3ikxw"]
+background_mode = 3
+adjustment_contrast = 1.33
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekfnk"]
 bg_color = Color(0, 0, 0, 0.8509804)
@@ -52,7 +53,7 @@ skew = 0.0
 script = ExtResource("1_w447a")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_vf5ng")
+environment = SubResource("Environment_3ikxw")
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -4096
@@ -71,7 +72,8 @@ texture = ExtResource("3_e7fe8")
 expand_mode = 1
 
 [node name="Main_Chu" type="Sprite2D" parent="."]
-position = Vector2(916, 456)
+texture_filter = 6
+position = Vector2(897.00006, 465)
 scale = Vector2(1.146199, 1.0995212)
 texture = ExtResource("2_sp8fs")
 

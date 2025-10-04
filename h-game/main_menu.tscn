@@ -1,13 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmv346dxq5u14"]
+[gd_scene load_steps=9 format=3 uid="uid://cmv346dxq5u14"]
 
 [ext_resource type="Script" path="res://main.py" id="1_glbon"]
-[ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="2_nlkkf"]
+[ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="3_nlkkf"]
 [ext_resource type="FontFile" uid="uid://c3xq2g0h1idc6" path="res://font/TA 8 bit.otf" id="3_qe12f"]
 [ext_resource type="Script" path="res://Level.py" id="4_8qtwp"]
 [ext_resource type="Script" path="res://UI/LEVEL.py" id="5_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://bvvhka477bxcl" path="res://img/Background/BG1_dungeonsotoN.png" id="5_glbon"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epypp"]
-texture = ExtResource("2_nlkkf")
+[sub_resource type="Environment" id="Environment_nlkkf"]
+background_mode = 3
+adjustment_enabled = true
+adjustment_contrast = 1.24
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qe12f"]
 
 [node name="Node2D" type="Node2D"]
 _import_path = NodePath("")
@@ -39,25 +44,31 @@ scale = Vector2(1, 1)
 skew = 0.0
 script = ExtResource("1_glbon")
 
-[node name="Panel" type="Panel" parent="."]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -11.0
-offset_top = -10.0
-offset_right = 1223.0
-offset_bottom = 708.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_epypp")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nlkkf")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -4096
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("5_glbon")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="."]
+offset_left = 684.0
+offset_top = 202.0
+offset_right = 1111.0
+offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("3_nlkkf")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qe12f")
+text = "Integrated Strategy"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 40.0
-offset_top = 279.0
-offset_right = 410.0
-offset_bottom = 572.0
+offset_left = 748.0
+offset_top = 300.0
+offset_right = 1084.0
+offset_bottom = 564.0
 
 [node name="New_Game" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -86,15 +97,6 @@ size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_qe12f")
 theme_override_font_sizes/font_size = 40
 text = "Exit"
-
-[node name="Title" type="Label" parent="."]
-offset_left = 22.0
-offset_top = 164.0
-offset_right = 632.0
-offset_bottom = 226.0
-theme_override_fonts/font = ExtResource("3_qe12f")
-theme_override_font_sizes/font_size = 45
-text = "Integrated Strategy (IS)"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 _import_path = NodePath("")
