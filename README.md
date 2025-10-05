@@ -54,13 +54,6 @@
 ### Godot
 - Good balance (GDScript is Python-like, rapid prototyping possible).
 - Strong 2D support, easier than Unity for this scope.
-
-### Members
-- 68070003 กฤตภาส ไพรสาลี
-- 68070035 ฐิติวัฒน์ มนต์วิเศษ
-- 68070083 นัธทวัฒน์ พละเดช
-- 68070150 เมธา ภัทรพิชญกุล
-
 ### Program
 - <a href="https://godotengine.org">Godot</a>
 ### Related Topics
