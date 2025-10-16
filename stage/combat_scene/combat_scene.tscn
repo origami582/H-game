@@ -1,0 +1,160 @@
+[gd_scene load_steps=15 format=3 uid="uid://80o0vrx8ov3h"]
+
+[ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
+[ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
+[ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
+[ext_resource type="Texture2D" uid="uid://xob4ygnoylmu" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
+[ext_resource type="Texture2D" uid="uid://dt2xcisrtlom2" path="res://img/Chu.png" id="4_n3c6q"]
+[ext_resource type="Texture2D" uid="uid://ce1neujqiuv2m" path="res://img/Buttons/omoide2_1battle.png" id="6_estmv"]
+[ext_resource type="Script" uid="uid://bsw6oxfvctpbr" path="res://stage/combat_scene/hp_monster.gd" id="7_it1vf"]
+[ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="7_n3c6q"]
+[ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="9_4pwfs"]
+[ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="10_g7ypw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gapb1"]
+bg_color = Color(0, 0, 0, 0.8509804)
+
+[sub_resource type="FontVariation" id="FontVariation_iqhti"]
+base_font = ExtResource("9_4pwfs")
+
+[sub_resource type="FontVariation" id="FontVariation_5m2hi"]
+base_font = ExtResource("10_g7ypw")
+
+[sub_resource type="LabelSettings" id="LabelSettings_pjunm"]
+font = ExtResource("9_4pwfs")
+font_size = 60
+
+[node name="Node2D" type="Node2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+position = Vector2(0, 0)
+rotation = 0.0
+scale = Vector2(1, 1)
+skew = 0.0
+script = ExtResource("1_601pc")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -4096
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_j8b3c")
+expand_mode = 1
+
+[node name="Overlay" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_4pwfs")
+expand_mode = 1
+
+[node name="Monster" type="Sprite2D" parent="."]
+position = Vector2(564, 239)
+scale = Vector2(1, 0.98542607)
+texture = ExtResource("2_estmv")
+region_rect = Rect2(0, 0, 345, 223)
+
+[node name="MC" type="Sprite2D" parent="."]
+texture_filter = 6
+position = Vector2(892, 465)
+scale = Vector2(1.116959, 1.0995212)
+texture = ExtResource("4_n3c6q")
+
+[node name="Attack_Button" type="Button" parent="."]
+offset_left = 207.0
+offset_top = 327.0
+offset_right = 390.0
+offset_bottom = 504.0
+icon = ExtResource("6_estmv")
+flat = true
+expand_icon = true
+
+[node name="Flee_Button" type="Button" parent="."]
+offset_left = 247.0
+offset_top = 508.0
+offset_right = 610.0
+offset_bottom = 604.0
+icon = ExtResource("7_n3c6q")
+flat = true
+
+[node name="HP_monster" type="Label" parent="."]
+offset_left = 398.0
+offset_top = 72.0
+offset_right = 596.0
+offset_bottom = 177.0
+text = "Floating Text here"
+language = "en"
+script = ExtResource("7_it1vf")
+
+[node name="dead_screen" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="dead_screen_panel" type="Panel" parent="dead_screen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.0
+offset_top = -191.0
+offset_right = 308.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gapb1")
+
+[node name="died_back_to_menu" type="Button" parent="dead_screen/dead_screen_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.81200004
+anchor_right = 0.50200003
+anchor_bottom = 0.814
+offset_left = -115.5
+offset_top = -26.552002
+offset_right = 114.21399
+offset_bottom = 31.656006
+theme_override_fonts/font = SubResource("FontVariation_iqhti")
+theme_override_font_sizes/font_size = 25
+text = "Back to Main Menu"
+
+[node name="Label" type="Label" parent="dead_screen/dead_screen_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.24200001
+anchor_right = 0.505
+anchor_bottom = 0.24200001
+offset_left = -228.715
+offset_top = -55.83201
+offset_right = 229.285
+offset_bottom = 56.16799
+theme_override_fonts/font = SubResource("FontVariation_5m2hi")
+theme_override_font_sizes/font_size = 75
+text = "You Died"
+label_settings = SubResource("LabelSettings_pjunm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Attack_Button" to="." method="_on_attack_button_pressed"]
+[connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]
+[connection signal="pressed" from="dead_screen/dead_screen_panel/died_back_to_menu" to="." method="_on_died_back_to_menu_pressed"]
